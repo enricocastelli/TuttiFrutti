@@ -10,7 +10,7 @@ import UIKit
 
 fileprivate let cellID = String(describing: CardCell.self)
 
-class GameVC: UIViewController {
+class GameVC: UIViewController, AlertProvider {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var deckCollectionView: UICollectionView!
@@ -53,12 +53,15 @@ class GameVC: UIViewController {
                 if let directions = isItemClose(itemIndex, adiacentIndex), !currentItem.isEmpty() && !adiacentItem.isEmpty() {
                     if currentItem.angles.contains(directions.0) &&
                         adiacentItem.angles.contains(directions.1) {
-
                     } else if currentItem.angles.contains(directions.0) {
-                        adiacentItem.isUser = currentItem.isUser
+                        adiacentItem.points -= 1
+                        currentItem.points += 1
+                        adiacentItem.isUser = adiacentItem.points <= 0 && currentItem.isUser
                         addedItems.update(adiacentItem, index: adiacentIndex)
                     } else if adiacentItem.angles.contains(directions.1) {
-                        currentItem.isUser = adiacentItem.isUser
+                        currentItem.points -= 1
+                        adiacentItem.points += 1
+                        currentItem.isUser = currentItem.points <= 0 && adiacentItem.isUser
                         addedItems.update(currentItem, index: itemIndex)
                     } else {
                         
@@ -126,17 +129,38 @@ class GameVC: UIViewController {
     func over() {
         let userCards = addedItems.filter({ ($0.isUser)})
         let tot = (addedItems.count - 1)/2
+        var result: String = ""
         if userCards.count > tot {
             if userCards.count == addedItems.count {
-                print("perfect")
+                result = "perfect"
             } else {
-                print("win")
+                result = "win"
             }
         } else if userCards.count == tot {
-            print("tie")
+            result = "tie"
         } else if userCards.count < tot {
-            print("lost")
+            result = "lost"
         }
+        let alert = AlertModel(title: result, description: "", buttonTitle: "retry") { (_) in
+            self.restart()
+        }
+        presentAlert(alert)
+    }
+    
+    func restart() {
+        items =  Card.getRandomDeck()
+        addedItems = [Card(name: "", power: 0),
+                                   Card(name: "", power: 0),
+                                   Card(name: "", power: 0),
+                                   Card(name: "", power: 0),
+                                   Card(name: "", power: 0),
+                                   Card(name: "", power: 0),
+                                   Card(name: "", power: 0),
+                                   Card(name: "", power: 0),
+                                   Card(name: "", power: 0)
+        ]
+        collectionView.reloadData()
+        deckCollectionView.reloadData()
     }
 }
 

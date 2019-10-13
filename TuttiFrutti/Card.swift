@@ -13,6 +13,7 @@ struct Card {
     var power: Int
     var angles: [Direction] = []
     var isUser: Bool = true
+    var points = 0
     
     init(name: String, power: Int) {
         self.name = name

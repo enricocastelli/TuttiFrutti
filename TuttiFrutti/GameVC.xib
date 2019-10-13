@@ -24,7 +24,7 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-Rh-qeO">
                     <rect key="frame" x="16" y="64" width="382" height="561.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cFp-6W-lfj">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="cFp-6W-lfj">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -55,7 +55,7 @@
                 <constraint firstItem="c82-Sx-mXn" firstAttribute="top" secondItem="sQc-Rh-qeO" secondAttribute="bottom" constant="16" id="ZiX-ea-gI4"/>
                 <constraint firstAttribute="bottom" secondItem="c82-Sx-mXn" secondAttribute="bottom" id="bAw-hB-2uC"/>
             </constraints>
-            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+            <point key="canvasLocation" x="-104" y="17"/>
         </view>
     </objects>
 </document>
