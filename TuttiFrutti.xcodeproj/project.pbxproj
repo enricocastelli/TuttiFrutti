@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1C2B945C2352830700E64AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B945B2352830700E64AF4 /* AppDelegate.swift */; };
-		1C2B945E2352830700E64AF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B945D2352830700E64AF4 /* ViewController.swift */; };
 		1C2B94612352830700E64AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2B945F2352830700E64AF4 /* Main.storyboard */; };
 		1C2B94632352830800E64AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2B94622352830800E64AF4 /* Assets.xcassets */; };
 		1C2B94662352830800E64AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2B94642352830800E64AF4 /* LaunchScreen.storyboard */; };
 		1C2B94712352830800E64AF4 /* TuttiFruttiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B94702352830800E64AF4 /* TuttiFruttiTests.swift */; };
 		1C2B947C2352830800E64AF4 /* TuttiFruttiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B947B2352830800E64AF4 /* TuttiFruttiUITests.swift */; };
+		1C2B948B2352843500E64AF4 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B94892352843500E64AF4 /* GameVC.swift */; };
+		1C2B948C2352843500E64AF4 /* GameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2B948A2352843500E64AF4 /* GameVC.xib */; };
+		1C2B948F2352851500E64AF4 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B948D2352851500E64AF4 /* CardCell.swift */; };
+		1C2B94902352851500E64AF4 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2B948E2352851500E64AF4 /* CardCell.xib */; };
+		1C2B9492235285A300E64AF4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B9491235285A300E64AF4 /* Card.swift */; };
+		1C2B949423534DEA00E64AF4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B949323534DEA00E64AF4 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		1C2B94582352830700E64AF4 /* TuttiFrutti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuttiFrutti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2B945B2352830700E64AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C2B945D2352830700E64AF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1C2B94602352830700E64AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C2B94622352830800E64AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C2B94652352830800E64AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		1C2B94772352830800E64AF4 /* TuttiFruttiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuttiFruttiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2B947B2352830800E64AF4 /* TuttiFruttiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuttiFruttiUITests.swift; sourceTree = "<group>"; };
 		1C2B947D2352830800E64AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C2B94892352843500E64AF4 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		1C2B948A2352843500E64AF4 /* GameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameVC.xib; sourceTree = "<group>"; };
+		1C2B948D2352851500E64AF4 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		1C2B948E2352851500E64AF4 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		1C2B9491235285A300E64AF4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		1C2B949323534DEA00E64AF4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				1C2B945B2352830700E64AF4 /* AppDelegate.swift */,
-				1C2B945D2352830700E64AF4 /* ViewController.swift */,
+				1C2B9491235285A300E64AF4 /* Card.swift */,
+				1C2B949323534DEA00E64AF4 /* Extension.swift */,
+				1C2B94892352843500E64AF4 /* GameVC.swift */,
+				1C2B948A2352843500E64AF4 /* GameVC.xib */,
 				1C2B945F2352830700E64AF4 /* Main.storyboard */,
+				1C2B948D2352851500E64AF4 /* CardCell.swift */,
+				1C2B948E2352851500E64AF4 /* CardCell.xib */,
 				1C2B94622352830800E64AF4 /* Assets.xcassets */,
 				1C2B94642352830800E64AF4 /* LaunchScreen.storyboard */,
 				1C2B94672352830800E64AF4 /* Info.plist */,
@@ -231,6 +246,8 @@
 			files = (
 				1C2B94662352830800E64AF4 /* LaunchScreen.storyboard in Resources */,
 				1C2B94632352830800E64AF4 /* Assets.xcassets in Resources */,
+				1C2B94902352851500E64AF4 /* CardCell.xib in Resources */,
+				1C2B948C2352843500E64AF4 /* GameVC.xib in Resources */,
 				1C2B94612352830700E64AF4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C2B945E2352830700E64AF4 /* ViewController.swift in Sources */,
+				1C2B949423534DEA00E64AF4 /* Extension.swift in Sources */,
+				1C2B948B2352843500E64AF4 /* GameVC.swift in Sources */,
 				1C2B945C2352830700E64AF4 /* AppDelegate.swift in Sources */,
+				1C2B948F2352851500E64AF4 /* CardCell.swift in Sources */,
+				1C2B9492235285A300E64AF4 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

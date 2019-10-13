@@ -16,8 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UITestCheck()
+        let gameVC = GameVC()
+        let nav = UINavigationController(rootViewController: gameVC)
+        nav.interactivePopGestureRecognizer?.isEnabled = false
+        nav.isNavigationBarHidden = true
+        self.window?.rootViewController = nav
         return true
     }
+    
+    func UITestCheck() {
+        let arguments = ProcessInfo.processInfo.arguments
+        if arguments.contains("NoAnimations") {
+            UIView.setAnimationsEnabled(false)
+        }
+    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
